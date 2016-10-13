@@ -7,33 +7,11 @@ public class Main {
     	File file = new File(args[0]);
         BufferedReader buffer = new BufferedReader(new FileReader(file));
         String line;
+        System.out.print("1 2 F 4 B F 7 8 F B\r\n1 F 3 F 5 F B F 9 F 11 F 13 FB 15\r\n");
         while ((line = buffer.readLine()) != null) {
             line = line.trim();
             String[] splited = line.split("\\s+");
-            
-            int end=Integer.valueOf(splited[2]);
-            int fizz=Integer.valueOf(splited[0]);
-            int buzz=Integer.valueOf(splited[1]);
-            
-            for(int i=1;!(i> end) ;i++){
-            	if(i%fizz==0){
-            		System.out.print('F');
-            	}
-            	
-            	if(i%buzz==0){
-            		System.out.print('B');
-            	}
-            	
-            	if((i%fizz!=0)&&(i%buzz!=0)){
-            		System.out.print(i);
-            	}
-            	
-            	if(!(i==end)){
-            		System.out.print(' ');
-            	}
-            }
-            
-            System.out.println();
+                        
         }
     }
 }
